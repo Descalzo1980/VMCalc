@@ -8,10 +8,12 @@ import com.example.vmcalc.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainActivityViewModel
+    private lateinit var viewModelFactory: MainActivityViewModelFactory
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
+        viewModelFactory = MainActivityViewModelFactory(125)
+        viewModel = ViewModelProvider(this,viewModelFactory)[MainActivityViewModel::class.java]
         setContentView(binding.root)
         binding.tvResult.text = viewModel.getTotal().toString()
 
