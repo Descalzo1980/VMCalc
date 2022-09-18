@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VMCalc</string>
+    <string name="add">добавить</string>
+    <string name="textview">текст</string>
+    <string name="some">что-то</string>
+</resources>
